@@ -1,0 +1,98 @@
+---
+name:  histogram
+title: Histogramm
+menuGroup: School
+version: '1.0.0'
+jas: '1.2'
+
+options:
+    - name: data
+      type: Data
+
+    - name: var
+      title: Variable
+      type: Variable
+
+    - name: count
+      title: Count  
+      type: List
+      options: 
+        - name: abs
+          title: Absolute Numbers
+        - name: prop
+          title: Proportions
+      default: abs
+      description:
+        R: >
+          `'abs'` (default) , `'prop'`. Choose wether to use absolute count or proportions on the y-axis
+
+    - name: bounds
+      title: Set lower and upper bound
+      type: List
+      options: 
+        - name: format
+          title: "[l,u] = [Minimum,Maximum]"
+        - name: man
+          title: "[l,u] = " 
+      default: format
+      description:
+        R: >
+          `'format'` (default) , `'man'`. Choose wether to use set bounds for x-axis manually or format by rule
+    
+    - name: lowerBound
+      title: '['
+      type: Number
+      default: 0
+    
+    - name: upperBound
+      title: ','
+      type: Number
+      default: 20
+
+    - name: bins
+      title: Bins
+      type: List
+      options: 
+        - name: numBins
+          title: Number of Bins
+        - name: widthBins
+          title: Binwidth
+        - name: ruleBins
+          title: Rule of Thumb 
+        - name: breakBins
+          title: Set Breakpoints manually (Seperate by ",")
+          
+      default: numBins
+      description:
+        R: >
+          `'numBins'` (default) , `'breakBins'` , `'ruleBins'` or `'widthBins'`. Define Number of Bins, set Breakpoints manually, use rule of thumb or use binWidth , respectively
+
+    - name: numBinsN
+      title: ''
+      type: Integer
+      default: 19
+    
+    - name: widthBinsN
+      title: ''
+      type: Number
+      default: 1.0
+
+    - name: ruleBinsN
+      title: ''
+      type: List
+      options: 
+        - name: sqrtN
+          title: SquareRoot(n)
+        - name: logN
+          title: 10*Log10(n)
+      default: sqrtN
+
+    - name: breakBinsN
+      title: ''
+      type: String
+      default: '0,1,10,20,100'
+      
+
+
+      
+... 

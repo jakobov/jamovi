@@ -1,0 +1,113 @@
+title: Hypothesis Test
+name: htest
+jus: '3.0'
+stage: 0
+compilerMode: tame
+children:
+  - type: LayoutBox
+    margin: large
+    cell:
+      column: 0
+      row: 0
+    style: inline
+    stretchFactor: 1
+    children:
+      - type: Label
+        label: Side of Test
+        iconPosition: right
+        children:
+          - type: RadioButton
+            name: side_leftSide
+            fitToGrid: true
+            cell:
+              column: 0
+              row: 0
+            optionName: side
+            optionPart: leftSide
+          - type: RadioButton
+            name: side_bothSides
+            fitToGrid: true
+            cell:
+              column: 1
+              row: 0
+            optionName: side
+            optionPart: bothSides
+          - type: RadioButton
+            name: side_rightSide
+            fitToGrid: true
+            cell:
+              column: 2
+              row: 0
+            optionName: side
+            optionPart: rightSide
+  - type: LayoutBox
+    margin: large
+    cell:
+      column: 0
+      row: 1
+    style: inline
+    stretchFactor: 1
+    children:
+      - type: Label
+        label: Test Value
+        iconPosition: right
+        children:
+          - type: TextBox
+            name: p0
+            format: string
+  - type: LayoutBox
+    margin: large
+    cell:
+      column: 1
+      row: 1
+    style: inline
+    stretchFactor: 1
+    children:
+      - type: Label
+        label: Observed Values
+        iconPosition: right
+        children:
+          - type: TextBox
+            name: 'n'
+            format: number
+          - type: TextBox
+            name: k
+            format: number
+          
+  - type: LayoutBox
+    margin: large
+    cell:
+      column: 2
+      row: 1
+    style: inline
+    stretchFactor: 1
+    children:
+      - type: Label
+        label: Significance Level
+        iconPosition: right
+        children:
+          - type: TextBox
+            name: alpha
+            format: string
+  - type: CollapseBox
+    label: Plot Options
+    collapsed: true
+    children:
+      - type: CheckBox
+        name: expl
+      - type: CheckBox
+        name: showHypoPlot
+      - type: CheckBox
+        name: kLine
+        enable: (showHypoPlot)
+      - type: CheckBox
+        name: scaleX
+        enable: (showHypoPlot)
+      - type: CheckBox
+        name: showErrorPlot
+      - type: TextBox
+        name: p
+        format: string
+        enable: (showErrorPlot)
+      
+

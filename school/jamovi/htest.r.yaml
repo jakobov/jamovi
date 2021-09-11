@@ -1,0 +1,74 @@
+---
+name:  htest
+title: Hypothesis Test
+jrs:   '1.1'
+
+items:
+    - name:  text
+      title: Explanation
+      type:  Preformatted
+      visible: (expl)
+    
+    - name: todo
+      title: Explanation
+      type: Html
+      visible: (expl)
+      clearWith:
+        - side
+        - alpha
+        - p0
+        - expl
+    
+    - name: table
+      title: Binomial Test
+      type: Table
+      description: a table of the test results
+      clearWith:
+        - p0
+        - n
+        - k
+        - side
+        - alpha
+      columns:
+        - name: label
+          title: ""
+          type: text 
+        - name: result
+          title: Result
+          type: number
+
+    - name: hypoPlot
+      title: ''
+      type: Image
+      visible: (showHypoPlot)
+      clearWith:
+        - p0
+        - n
+        - k
+        - side
+        - alpha
+        - kLine
+        - scaleX
+        - showHypoPlot
+      width:  600
+      height: 400
+      renderFun: .hypoPlot
+    
+    #- name: errorPlot
+    #  title: ''
+    #  type: Image
+    #  visible: (showErrorPlot)
+    #  clearWith:
+    #    - p0
+    #    - n
+    #    - k
+    #    - side
+    #    - alpha
+    #    - kLine
+    #    - scaleX
+    #    - showErrorPlot
+    #    - p
+    #  width:  600
+    #  height: 400
+    #  renderFun: .errorPlot
+...

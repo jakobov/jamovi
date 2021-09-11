@@ -1,0 +1,36 @@
+title: Law of Large Numbers
+name: lawOfLargeNumbers
+jus: '3.0'
+stage: 0
+compilerMode: tame
+children:
+  - type: LayoutBox
+    margin: large
+    fitToGrid: true
+    cell:
+      column: 0
+      row: 1
+    children:
+      - type: Label
+        label: Can you find out which coin and which dice is unfair?
+        format: label
+        cell:
+          column: 0
+          row: 0
+      - type: ComboBox
+        name: throw
+        cell:
+          column: 0
+          row: 1
+        
+  - type: LayoutBox
+    margin: large
+    children:
+      - type: TextBox
+        name: num
+        format: number
+  - type: LayoutBox
+    margin: large
+    children:
+      - type: CheckBox
+        name: theoMean

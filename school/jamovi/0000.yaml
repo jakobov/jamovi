@@ -1,0 +1,50 @@
+---
+title: Demonstration for school students
+name: School
+version: 1.0.0
+jms: '1.0'
+authors:
+  - Jakob Dybowski
+maintainer: Jakob Dybowski <cyber-d@outlook.com>
+date: '2021-05-09'
+type: R
+description: >-
+  The module provides easy demonstrations and plots for school students in math
+  class. It's intended to support teaching statistics
+analyses:
+  - title: Histogramm
+    name: histogram
+    ns: School
+    menuGroup: School
+    menuTitle: Histogramm
+  - title: Law of Large Numbers
+    name: lawOfLargeNumbers
+    ns: School
+    menuGroup: School
+    menuTitle: Law of Large Numbers
+  - title: Different Parameters
+    name: binom
+    ns: School
+    menuGroup: School
+    menuSubgroup: Binomial Distribution
+    menuTitle: Different Parameters
+  - title: Binomial Hypothesis Test
+    name: htest
+    ns: School
+    menuGroup: School
+    menuSubgroup: Binomial Distribution
+    menuTitle: Binomial Hypothesis Test
+datasets:
+  - name: Boxplot
+    path: Boxplot.csv
+    description: Shoe Size of a fictional class for Box Plot
+  - name: SideEffects
+    path: SideEffects.csv
+    description: Medical Side Effects after Medication
+  - name: Way2School
+    path: Way2School.csv
+    description: Distance to school in km of a fictional class
+usesNative: true
+minApp: 1.0.8
+
+...

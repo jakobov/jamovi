@@ -1,0 +1,15 @@
+exportPattern("^[[:alpha:]]+")
+import(dplyr, ggplot2)
+
+
+export(histogramClass)
+export(histogramOptions)
+
+export(lawOfLargeNumbersClass)
+export(lawOfLargeNumbersOptions)
+
+export(binomClass)
+export(binomOptions)
+
+export(htestClass)
+export(htestOptions)

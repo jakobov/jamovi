@@ -1,0 +1,64 @@
+---
+name:  binom
+title: Binomial Distribution
+jrs:   '1.1'
+
+items:
+    - name:  text
+      title: Binomial Distribution
+      type:  Output
+    
+    - name: valueTable1
+      title: Different Size
+      type: Table
+      rows: 3
+      columns:
+        - name: sizeCol
+          title: Size
+          type: text
+        - name: probCol
+          title: Probability
+          type: text
+
+    - name: valueTable2
+      title: Different Probability
+      type: Table
+      rows: 3
+      columns:
+        - name: sizeCol
+          title: Size
+          type: text
+        - name: probCol
+          title: Probability
+          type: text
+        
+    
+    - name: binomPlot1
+      title: 'Different Size'
+      type: Image
+      width:  600
+      height: 300
+      #visible: true
+      clearWith: 
+        - p
+        - n1
+        - n2
+        - n3
+        - mean
+        - std
+      renderFun: .binomplot
+    
+    - name: binomPlot2
+      title: 'Different Probability'
+      type: Image
+      width:  600
+      height: 300
+      clearWith: 
+        - n
+        - p1
+        - p2
+        - p3
+        - mean 
+        - std
+      renderFun: .binomplot
+...

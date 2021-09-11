@@ -1,0 +1,80 @@
+---
+name:  htest
+title: Binomial Hypothesis Test
+menuGroup: School
+version: '1.0.0'
+jas: '1.2'
+
+options:
+    - name: data
+      type: Data
+
+    - name: p0
+      title: "p\u2080 ="
+      type: String
+      default: "0.5"
+
+    - name: n
+      title: n =
+      type: Number
+      default: 20
+    
+    - name: k
+      title: k =
+      type: Number
+      default: 5
+
+    - name: side
+      title: ''
+      type: List
+      options: 
+        - name: leftSide
+          title: Left Side
+        - name: bothSides
+          title: both Sides 
+        - name: rightSide
+          title: Right Side
+        
+      default: leftSide
+      description:
+        R: >
+          `'leftSide'` (default) , `'bothSides'` , `'rightSide'`. Decide on which Side you want to take the test
+
+    - name: alpha
+      title: "\u03B1 ="
+      type: String
+      default: "0.05"
+
+    - name: showHypoPlot
+      title: Show Hypothesis Plot
+      type: Bool
+      default: true
+
+    - name: kLine
+      title: Show k
+      type: Bool
+      default: true
+
+    - name: scaleX
+      title: "Limit Scale to [\u03BC-4*\u03C3,\u03BC+4*\u03C3]"
+      type: Bool
+      default: true
+    
+    - name: expl
+      title: Show Explanation
+      type: Bool
+      default: true
+
+    - name: showErrorPlot
+      title: Show Error Plot
+      type: Bool
+      default: false
+    
+    - name: p
+      title: "p ="
+      type: String
+      default: "0.7"
+    
+    
+    
+...

@@ -1,0 +1,120 @@
+title: Histogramm
+name: histogram
+jus: '3.0'
+stage: 0
+compilerMode: tame
+children:
+  - type: VariableSupplier
+    persistentItems: false
+    stretchFactor: 1
+    children:
+      - type: TargetLayoutBox
+        label: Variable to plot
+        children:
+          - type: VariablesListBox
+            name: var
+            maxItemCount: 1
+            isTarget: true
+  - type: LayoutBox
+    margin: large
+    style: inline
+    stretchFactor: 1
+    children:
+      - type: Label
+        label: Vertical Scale
+        iconPosition: right
+        children:
+          - type: RadioButton
+            name: count_abs
+            optionName: count
+            optionPart: abs
+          - type: RadioButton
+            name: count_prop
+            optionName: count
+            optionPart: prop
+      - type: Label
+        label: Set lower and upper bound
+        iconPosition: right
+        children:
+          - type: RadioButton
+            name: bounds_format
+            optionName: bounds
+            optionPart: format
+            enable: (bins_numBins|| bins_widthBins || bins_ruleBins)
+          - type: RadioButton
+            name: bounds_man
+            optionName: bounds
+            optionPart: man
+            enable: (bins_numBins|| bins_widthBins || bins_ruleBins)
+            style: inline
+            children:
+              - type: TextBox
+                name: lowerBound
+                format: number
+                enable: (bounds_man && (bins_numBins|| bins_widthBins || bins_ruleBins))
+              - type: TextBox
+                name: upperBound
+                format: number
+                enable: (bounds_man && (bins_numBins|| bins_widthBins || bins_ruleBins))
+                suffix: ']'
+  - type: LayoutBox
+    margin: large
+    style: inline
+    stretchFactor: 1
+    children:
+      - type: Label
+        label: Adjust Bins
+        iconPosition: right
+        children:
+          - type: RadioButton
+            name: bins_numBins
+            fitToGrid: true
+            cell:
+              column: 0
+              row: 0
+            optionName: bins
+            optionPart: numBins
+            children:
+              - type: TextBox
+                name: numBinsN
+                format: number
+                enable: (bins_numBins)
+          - type: RadioButton
+            name: bins_widthBins
+            fitToGrid: true
+            cell:
+              column: 1
+              row: 0
+            optionName: bins
+            optionPart: widthBins
+            children:
+              - type: TextBox
+                name: widthBinsN
+                format: number
+                enable: (bins_widthBins)
+          - type: RadioButton
+            name: bins_breakBins
+            fitToGrid: true
+            cell:
+              column: 2
+              row: 0
+            optionName: bins
+            optionPart: breakBins
+            children:
+              - type: TextBox
+                name: breakBinsN
+                format: string
+                width: largest
+                enable: (bins_breakBins)
+          - type: RadioButton
+            name: bins_ruleBins
+            fitToGrid: true
+            cell:
+              column: 0
+              row: 1
+            optionName: bins
+            optionPart: ruleBins
+            children:
+              - type: ComboBox
+                name: ruleBinsN
+                enable: (bins_ruleBins)

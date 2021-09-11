@@ -1,0 +1,88 @@
+title: Binomial Distribution
+name: binom
+jus: '3.0'
+stage: 0
+compilerMode: tame
+children:
+  - type: LayoutBox
+    margin: large
+    fitToGrid: true
+    cell:
+      column: 0
+      row: 0
+    children:
+      - type: Label
+        label: Different Size                      
+        iconPosition: right
+        children:
+        - type: TextBox
+          name: p
+          format: number
+          cell:
+            column: 0
+            row: 0
+        - type: TextBox
+          name: n1
+          format: number
+          cell:
+            column: 0
+            row: 1
+        - type: TextBox
+          name: n2
+          format: number
+          cell:
+            column: 1
+            row: 1
+        - type: TextBox
+          name: n3
+          format: number
+          cell:
+            column: 2
+            row: 1
+
+  - type: LayoutBox
+    margin: large
+    fitToGrid: true
+    cell:
+      column: 1
+      row: 0
+    children:
+      - type: Label
+        label: Different Probability                     
+        iconPosition: right
+        children:
+        - type: TextBox
+          name: n
+          format: number
+          cell:
+            column: 0
+            row: 0
+        - type: TextBox
+          name: p1
+          format: number
+          cell:
+            column: 0
+            row: 1
+        - type: TextBox
+          name: p2
+          format: number
+          cell:
+            column: 1
+            row: 1
+        - type: TextBox
+          name: p3
+          format: number
+          cell:
+            column: 2
+            row: 1
+  - type: LayoutBox
+    margin: large
+    fitToGrid: true
+    cell:
+      column: 0
+      row: 1
+    children:
+      - type: CheckBox
+        name: mean
+      - type: CheckBox
+        name: std

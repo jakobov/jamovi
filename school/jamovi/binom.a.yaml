@@ -1,0 +1,64 @@
+---
+name:  binom
+title: Different Parameters
+menuGroup: School
+version: '1.0.0'
+jas: '1.2'
+
+options:
+    - name: data
+      type: Data
+
+    - name: p
+      title: p =
+      type: Number
+      default: 0.5
+
+    - name: n1
+      title: n =
+      type: Number
+      default: 10
+
+    - name: n2
+      title: '&'
+      type: Number
+      default: 20
+
+    - name: n3
+      title: '&'
+      type: Number
+      default: 30
+
+    - name: n
+      title: n =
+      type: Number
+      default: 20
+    
+    - name: p1
+      title: p = 
+      type: Number
+      default: 0.5
+    
+    - name: p2
+      title: '&'
+      type: Number
+      default: 0.7
+    
+    - name: p3
+      title: '&'
+      type: Number
+      default: 0.9
+    
+    - name: mean
+      title: 'Show mean (n*p)'
+      type: Bool
+      default: false
+    
+    - name: std
+      title: 'Show Standard Deviation (sqrt[n*p*(1-p)])'
+      type: Bool
+      default: false
+
+
+    
+...
