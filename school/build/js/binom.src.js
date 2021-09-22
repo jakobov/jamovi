@@ -3,7 +3,7 @@
 
 'use strict';
 
-const options = [{"name":"data","type":"Data"},{"name":"p","title":"p =","type":"Number","default":0.5},{"name":"n1","title":"n =","type":"Number","default":10},{"name":"n2","title":"&","type":"Number","default":20},{"name":"n3","title":"&","type":"Number","default":30},{"name":"n","title":"n =","type":"Number","default":20},{"name":"p1","title":"p =","type":"Number","default":0.5},{"name":"p2","title":"&","type":"Number","default":0.7},{"name":"p3","title":"&","type":"Number","default":0.9},{"name":"mean","title":"Show mean (n*p)","type":"Bool","default":false},{"name":"std","title":"Show Standard Deviation (sqrt[n*p*(1-p)])","type":"Bool","default":false}];
+const options = [{"name":"data","type":"Data"},{"name":"p","title":"p =","type":"String","default":"0.5"},{"name":"n1","title":"n =","type":"Integer","default":10},{"name":"n2","title":"&","type":"Integer","default":20},{"name":"n3","title":"&","type":"Integer","default":30},{"name":"n","title":"n =","type":"Integer","default":20},{"name":"p1","title":"p =","type":"String","default":"0.5"},{"name":"p2","title":"&","type":"String","default":"0.7"},{"name":"p3","title":"&","type":"String","default":"0.9"},{"name":"mean","title":"Show mean μ = n*p","type":"Bool","default":false},{"name":"std","title":"Show Standard Deviation σ = sqrt[n*p*(1-p)]","type":"Bool","default":false}];
 
 const view = function() {
     
@@ -43,7 +43,7 @@ view.layout = ui.extend({
 							type: DefaultControls.TextBox,
 							typeName: 'TextBox',
 							name: "p",
-							format: FormatDef.number,
+							format: FormatDef.string,
 							cell: {"column":0,"row":0}
 						},
 						{
@@ -95,21 +95,21 @@ view.layout = ui.extend({
 							type: DefaultControls.TextBox,
 							typeName: 'TextBox',
 							name: "p1",
-							format: FormatDef.number,
+							format: FormatDef.string,
 							cell: {"column":0,"row":1}
 						},
 						{
 							type: DefaultControls.TextBox,
 							typeName: 'TextBox',
 							name: "p2",
-							format: FormatDef.number,
+							format: FormatDef.string,
 							cell: {"column":1,"row":1}
 						},
 						{
 							type: DefaultControls.TextBox,
 							typeName: 'TextBox',
 							name: "p3",
-							format: FormatDef.number,
+							format: FormatDef.string,
 							cell: {"column":2,"row":1}
 						}
 					]

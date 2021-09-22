@@ -6,14 +6,14 @@ binomOptions <- if (requireNamespace("jmvcore", quietly=TRUE)) R6::R6Class(
     inherit = jmvcore::Options,
     public = list(
         initialize = function(
-            p = 0.5,
+            p = "0.5",
             n1 = 10,
             n2 = 20,
             n3 = 30,
             n = 20,
-            p1 = 0.5,
-            p2 = 0.7,
-            p3 = 0.9,
+            p1 = "0.5",
+            p2 = "0.7",
+            p3 = "0.9",
             mean = FALSE,
             std = FALSE, ...) {
 
@@ -23,38 +23,38 @@ binomOptions <- if (requireNamespace("jmvcore", quietly=TRUE)) R6::R6Class(
                 requiresData=TRUE,
                 ...)
 
-            private$..p <- jmvcore::OptionNumber$new(
+            private$..p <- jmvcore::OptionString$new(
                 "p",
                 p,
-                default=0.5)
-            private$..n1 <- jmvcore::OptionNumber$new(
+                default="0.5")
+            private$..n1 <- jmvcore::OptionInteger$new(
                 "n1",
                 n1,
                 default=10)
-            private$..n2 <- jmvcore::OptionNumber$new(
+            private$..n2 <- jmvcore::OptionInteger$new(
                 "n2",
                 n2,
                 default=20)
-            private$..n3 <- jmvcore::OptionNumber$new(
+            private$..n3 <- jmvcore::OptionInteger$new(
                 "n3",
                 n3,
                 default=30)
-            private$..n <- jmvcore::OptionNumber$new(
+            private$..n <- jmvcore::OptionInteger$new(
                 "n",
                 n,
                 default=20)
-            private$..p1 <- jmvcore::OptionNumber$new(
+            private$..p1 <- jmvcore::OptionString$new(
                 "p1",
                 p1,
-                default=0.5)
-            private$..p2 <- jmvcore::OptionNumber$new(
+                default="0.5")
+            private$..p2 <- jmvcore::OptionString$new(
                 "p2",
                 p2,
-                default=0.7)
-            private$..p3 <- jmvcore::OptionNumber$new(
+                default="0.7")
+            private$..p3 <- jmvcore::OptionString$new(
                 "p3",
                 p3,
-                default=0.9)
+                default="0.9")
             private$..mean <- jmvcore::OptionBool$new(
                 "mean",
                 mean,
@@ -228,14 +228,14 @@ binomBase <- if (requireNamespace("jmvcore", quietly=TRUE)) R6::R6Class(
 #' @export
 binom <- function(
     data,
-    p = 0.5,
+    p = "0.5",
     n1 = 10,
     n2 = 20,
     n3 = 30,
     n = 20,
-    p1 = 0.5,
-    p2 = 0.7,
-    p3 = 0.9,
+    p1 = "0.5",
+    p2 = "0.7",
+    p3 = "0.9",
     mean = FALSE,
     std = FALSE) {
 

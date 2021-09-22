@@ -11,51 +11,51 @@ options:
 
     - name: p
       title: p =
-      type: Number
-      default: 0.5
+      type: String
+      default: "0.5"
 
     - name: n1
       title: n =
-      type: Number
+      type: Integer
       default: 10
 
     - name: n2
       title: '&'
-      type: Number
+      type: Integer
       default: 20
 
     - name: n3
       title: '&'
-      type: Number
+      type: Integer
       default: 30
 
     - name: n
       title: n =
-      type: Number
+      type: Integer
       default: 20
     
     - name: p1
       title: p = 
-      type: Number
-      default: 0.5
+      type: String
+      default: "0.5"
     
     - name: p2
       title: '&'
-      type: Number
-      default: 0.7
+      type: String
+      default: "0.7"
     
     - name: p3
       title: '&'
-      type: Number
-      default: 0.9
+      type: String
+      default: "0.9"
     
     - name: mean
-      title: 'Show mean (n*p)'
+      title: "Show mean \u03BC = n*p"
       type: Bool
       default: false
     
     - name: std
-      title: 'Show Standard Deviation (sqrt[n*p*(1-p)])'
+      title: "Show Standard Deviation \u03C3 = sqrt[n*p*(1-p)]"
       type: Bool
       default: false
 

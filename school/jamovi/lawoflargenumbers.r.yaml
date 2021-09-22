@@ -4,11 +4,6 @@ title: Law of Large Numbers
 jrs:   '1.1'
 
 items:
-    - name:  warning
-      title: Error! Wrong number of trials.
-      type:  Preformatted
-      visible: false
-      
     - name: loln
       title: ''
       type: Image

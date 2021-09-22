@@ -17,7 +17,7 @@ children:
         children:
         - type: TextBox
           name: p
-          format: number
+          format: string
           cell:
             column: 0
             row: 0
@@ -59,19 +59,19 @@ children:
             row: 0
         - type: TextBox
           name: p1
-          format: number
+          format: string
           cell:
             column: 0
             row: 1
         - type: TextBox
           name: p2
-          format: number
+          format: string
           cell:
             column: 1
             row: 1
         - type: TextBox
           name: p3
-          format: number
+          format: string
           cell:
             column: 2
             row: 1

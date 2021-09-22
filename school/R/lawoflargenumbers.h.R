@@ -52,7 +52,6 @@ lawOfLargeNumbersResults <- if (requireNamespace("jmvcore", quietly=TRUE)) R6::R
     "lawOfLargeNumbersResults",
     inherit = jmvcore::Group,
     active = list(
-        warning = function() private$.items[["warning"]],
         loln = function() private$.items[["loln"]]),
     private = list(),
     public=list(
@@ -61,11 +60,6 @@ lawOfLargeNumbersResults <- if (requireNamespace("jmvcore", quietly=TRUE)) R6::R
                 options=options,
                 name="",
                 title="Law of Large Numbers")
-            self$add(jmvcore::Preformatted$new(
-                options=options,
-                name="warning",
-                title="Error! Wrong number of trials.",
-                visible=FALSE))
             self$add(jmvcore::Image$new(
                 options=options,
                 name="loln",
@@ -102,7 +96,6 @@ lawOfLargeNumbersBase <- if (requireNamespace("jmvcore", quietly=TRUE)) R6::R6Cl
 #' @param theoMean .
 #' @return A results object containing:
 #' \tabular{llllll}{
-#'   \code{results$warning} \tab \tab \tab \tab \tab a preformatted \cr
 #'   \code{results$loln} \tab \tab \tab \tab \tab an image \cr
 #' }
 #'
