@@ -123,7 +123,7 @@ histogramResults <- if (requireNamespace("jmvcore", quietly=TRUE)) R6::R6Class(
             super$initialize(
                 options=options,
                 name="",
-                title="Histogramm")
+                title="Histogram")
             self$add(jmvcore::Image$new(
                 options=options,
                 name="hist",
@@ -152,7 +152,7 @@ histogramBase <- if (requireNamespace("jmvcore", quietly=TRUE)) R6::R6Class(
                 requiresMissings = FALSE)
         }))
 
-#' Histogramm
+#' Histogram
 #'
 #' 
 #' @param data .

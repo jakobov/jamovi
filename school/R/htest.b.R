@@ -83,7 +83,7 @@ htestClass <- if (requireNamespace('jmvcore', quietly=TRUE)) R6::R6Class(
           table <- self$results$get('table')
           table$deleteRows()
           table$addRow(rowKey="1", values=list(label="Error Probability",result=pValue))
-          table$addRow(rowKey="2", values=list(label="Acception Area",result=jmvcore::format("[{},{}]", lowerAcc, upperAcc)))
+          table$addRow(rowKey="2", values=list(label="Acceptance Area",result=jmvcore::format("[{},{}]", lowerAcc, upperAcc)))
           if(side=="bothSides"){
             table$addRow(rowKey="3", values=list(label="Rejection Area",result=jmvcore::format("[{},{}] \u222A [{},{}]", lowerRej, upperRej, lowerRej2, upperRej2)))
           }else{
@@ -107,7 +107,7 @@ htestClass <- if (requireNamespace('jmvcore', quietly=TRUE)) R6::R6Class(
       ### 1.5 Plot Preparation ###
           #all in one list -> so later we can do fill=group in ggplot
           density <- c(dbinom,rejDensity) 
-          group <- c(rep("Acception Area",(n+1)),rep("Rejection Area",(n+1))) 
+          group <- c(rep("Acceptance Area",(n+1)),rep("Rejection Area",(n+1))) 
           # Frame Data
           plotData <- data.frame(var = x, density= density, group =group)
           # Set Data to Image 

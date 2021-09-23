@@ -12,11 +12,11 @@ description: >-
   The module provides easy demonstrations and plots for school students in math
   class. It's intended to support the of teaching statistics
 analyses:
-  - title: Histogramm
+  - title: Histogram
     name: histogram
     ns: School
     menuGroup: School
-    menuTitle: Histogramm
+    menuTitle: Histogram
   - title: Law of Large Numbers
     name: lawOfLargeNumbers
     ns: School
